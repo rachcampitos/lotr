@@ -1,0 +1,53 @@
+<div class="main-section">
+  <div class="background-image"></div>
+  <a routerLink="/landing-page" class="btn">
+    <i class="fas fa-arrow-left me-2"></i> Back to Home
+  </a>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-6"
+        [@textAnimation]
+        (@textAnimation.done)="onAnimationEnd($event)"
+      >
+        <div class="title">
+          <h4>Welcome to the</h4>
+          <h1>Characters Secti<span class="ring">o</span>n</h1>
+        </div>
+        <div class="content">
+          <p>
+            Discover the diverse cast of characters who inhabit Middle Earth,
+            from brave warriors to cunning wizards. Journey alongside Frodo
+            Baggins, Gandalf the Grey, and others as they embark on a quest to
+            defeat the forces of darkness. Whether you're new to Tolkien's
+            universe or a seasoned fan, explore the captivating stories of
+            Middle Earth's inhabitants and immerse yourself in a world of magic
+            and heroism.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 lnk-btn">
+        <div class="options d-flex flex-column">
+          <button
+            class="btn btn-dark btn-lg btn-block mb-2"
+            [@fadeOutButton1]="button1State"
+            (click)="toggleAnimation(2)"
+          >
+            View All Characters
+          </button>
+          <button
+            class="btn btn-dark btn-lg btn-block"
+            [@fadeOutButton2]="button2State"
+            (click)="toggleAnimation(1)"
+          >
+            Search for a Character
+          </button>
+          <app-search
+            [data]="this.charactersData"
+            *ngIf="showCharacterSearch"
+          ></app-search>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "MiddleEarth";
+  src: url("./assets/fonts/Middleearth-ao6m.ttf") format("truetype");
+  /* Add other font properties like font-weight and font-style if necessary */
+}
+@font-face {
+  font-family: "RingBearer";
+  src: url("./assets/fonts/RingbearerMedium-51mgZ.ttf") format("truetype");
+  /* Add other font properties like font-weight and font-style if necessary */
+}
+
+body {
+  font-family: "RingBearer", sans-serif !important;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #1f1f22;
+  color: #d9d9d9;
+}
+/* Track */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar handle on hover */
+}

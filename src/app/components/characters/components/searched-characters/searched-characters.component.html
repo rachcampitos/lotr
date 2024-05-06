@@ -1,0 +1,21 @@
+<div class="container" *ngIf="dataReady">
+  <div class="col-md-6">
+    <h1>{{ character.name }}</h1>
+    <p><strong>Gender:</strong> {{ character.gender }}</p>
+    <p><strong>Race:</strong> {{ character.race }}</p>
+    <p><strong>Birth:</strong> {{ character.birth }}</p>
+    <p><strong>Death:</strong> {{ character.death }}</p>
+    <p><strong>Spouse:</strong> {{ character.spouse }}</p>
+    <p><strong>Height:</strong> {{ character.height }}</p>
+    <!-- Add more details as needed -->
+    <a [href]="character.wikiUrl" target="_blank" class="btn btn-dark"
+      >More Info</a
+    >
+  </div>
+  <div class="fixed-quote" *ngIf="characterQuote.length">
+    <blockquote>
+      {{ characterQuote }}
+    </blockquote>
+    <cite>{{ character.name }}</cite>
+  </div>
+</div>

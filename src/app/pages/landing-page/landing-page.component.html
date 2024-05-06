@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <div [@textAnimation] (@textAnimation.done)="onAnimationEnd($event)">
+    <h1 class="h1 h2-md">Middle Earth</h1>
+  </div>
+  <div class="content" *ngIf="showContent" [@textAnimation2]>
+    <div class="row justify-content-between justify-content-md-between">
+      <div class="col-md-4 mb-3">
+        <button class="btn btn-dark btn-lg btn-block btn-custom" routerLink="/characters">Characters</button>
+      </div>
+      <div class="col-md-4 mb-3">
+        <button class="btn btn-dark btn-lg btn-block btn-custom" (click)="showBooks()">Books</button>
+      </div>
+      <div class="col-md-4 mb-3">
+        <button class="btn btn-dark btn-lg btn-block btn-custom" (click)="showMovies()">Movies</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<!-- character-search.component.html -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (input)="filterCharacters()"
+    placeholder="Search characters..."
+  />
+  <div class="character-list" *ngIf="searchQuery.length > 0">
+    <div
+      class="character"
+      *ngFor="let character of filteredCharacters"
+      (click)="selectCharacter(character)"
+    >
+      {{ character.name }}
+    </div>
+  </div>
+</div>

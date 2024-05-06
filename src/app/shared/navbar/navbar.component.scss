@@ -1,0 +1,9 @@
+.navbar{
+z-index: 999;
+  &.bg-dark{
+    background-color: transparent !important;
+  }
+  .nav-link, .navbar-brand{
+    letter-spacing: 2px;
+  }
+}
